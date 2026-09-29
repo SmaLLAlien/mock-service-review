@@ -14,7 +14,7 @@
     "test": "npm --prefix client test"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=20.9"
   },
   "devDependencies": {
     "concurrently": "^9.1.2"

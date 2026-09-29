@@ -6,11 +6,11 @@ Guide for AI coding agents working in this repo. Keep it accurate when you chang
 The DevDigest web UI (AI pull-request reviewer) running against an **in-memory Express mock API**. No database, no LLM, no GitHub. It is a prototype/MVP base: the UI is 1:1 with the upstream `dev-digest` project, plus prototype screens (Skills, Conventions, Memory, Project Context, agent Skills/Prompt preview/Versions tabs).
 
 ## Layout & commands
-Plain npm everywhere (three `package-lock.json`: root, `client/`, `mock-server/`). Node ≥ 20.
+Plain npm everywhere (three `package-lock.json`: root, `client/`, `mock-server/`). Node ≥ 20.9.
 
 | Path | Role | Port |
 |---|---|---|
-| `client/` | Next.js 15 App Router + React 19, React Query, next-intl | 3000 |
+| `client/` | Next.js 16 (Turbopack) App Router + React 19, React Query, next-intl 4 | 3000 |
 | `mock-server/` | Express 4, ESM JavaScript, in-memory state | 3001 |
 
 ```bash
