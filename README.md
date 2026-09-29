@@ -8,7 +8,7 @@ database, LLM or GitHub keys, or internet access after install.
 
 ## Quick start
 
-Requirements: **Node.js 20+** (22 recommended) and npm.
+Requirements: **Node.js 20.9+** (22 recommended) and npm.
 
 ```bash
 git clone <this repo>
@@ -54,7 +54,7 @@ Ports 3000 and 3001 must be free. To use another API address, set
 ## Layout
 
 ```
-client/        Next.js 15 + React 19 UI (design system in src/vendor/ui, i18n in messages/en)
+client/        Next.js 16 + React 19 UI (design system in src/vendor/ui, i18n in messages/en)
 mock-server/   Express mock of the DevDigest API — routes in src/server.js, data in src/data/
 ```
 

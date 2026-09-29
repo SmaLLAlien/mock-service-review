@@ -1,6 +1,6 @@
 # DevDigest web (client)
 
-Next.js 15 (App Router) + React 19 UI. In this repo it talks to the mock API in
+Next.js 16 (App Router, Turbopack) + React 19 UI. In this repo it talks to the mock API in
 `../mock-server` (default `http://localhost:3001`, override with
 `NEXT_PUBLIC_API_BASE`).
 
