@@ -1,0 +1,22 @@
+{
+  "name": "devdigest-ui-demo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DevDigest web UI running on an in-memory mock API — no database, Docker or API keys.",
+  "scripts": {
+    "postinstall": "npm --prefix mock-server install && npm --prefix client install",
+    "dev": "concurrently -k -n api,web -c blue,green \"npm --prefix mock-server start\" \"npm --prefix client run dev\"",
+    "start": "npm run dev",
+    "api": "npm --prefix mock-server start",
+    "web": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "typecheck": "npm --prefix client run typecheck",
+    "test": "npm --prefix client test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

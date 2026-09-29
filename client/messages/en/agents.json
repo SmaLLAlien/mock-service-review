@@ -1,0 +1,136 @@
+{
+  "card": {
+    "noDescription": "No description",
+    "skillCount": "{count} skills"
+  },
+  "list": {
+    "breadcrumbLab": "Skills Lab",
+    "breadcrumb": "Agents",
+    "title": "Agents",
+    "subtitle": "User-created reviewers. Each = provider + model + system prompt + linked skills.",
+    "searchPlaceholder": "Search agents…",
+    "addAgent": "Add Agent",
+    "createFromScratch": "Create from scratch",
+    "loadError": "Could not load agents.",
+    "emptyTitle": "No agents yet",
+    "emptyBody": "An agent is a configured reviewer — a model, a prompt, and the skills it uses. Create one to start reviewing.",
+    "emptyCta": "Create your first agent"
+  },
+  "create": {
+    "title": "Create agent",
+    "subtitle": "An agent is a configured reviewer — a model, a prompt, and the skills it uses.",
+    "cancel": "Cancel",
+    "create": "Create agent",
+    "creating": "Creating…",
+    "defaultName": "New Agent",
+    "defaultSystemPrompt": "You are a code reviewer. Examine the diff and return at most 5 high-value findings, each citing an exact file:line.",
+    "fields": {
+      "name": "Name",
+      "namePlaceholder": "Security Reviewer",
+      "description": "Description",
+      "descriptionPlaceholder": "What this agent reviews",
+      "provider": "Provider",
+      "model": "Model",
+      "systemPrompt": "System prompt"
+    }
+  },
+  "editor": {
+    "loadErrorTitle": "Couldn’t load this agent",
+    "loadErrorBody": "The agent could not be loaded.",
+    "agentFallback": "Agent",
+    "listTitle": "Agents",
+    "add": "Add",
+    "createFromScratch": "Create from scratch",
+    "disabled": "disabled",
+    "runOnPr": "Run on a PR…",
+    "tabs": {
+      "config": "Config",
+      "skills": "Skills",
+      "evals": "Evals",
+      "stats": "Stats",
+      "ci": "CI",
+      "prompt": "Prompt preview",
+      "versions": "Versions"
+    }
+  },
+  "config": {
+    "title": "Configuration",
+    "enabled": "Enabled",
+    "name": "Name",
+    "description": "Description",
+    "provider": "Provider",
+    "model": "Model",
+    "modelHint": "Models are loaded dynamically from the provider's /models.",
+    "modelEmptyHint": "No models loaded — set the {provider} API key in Settings → API Keys.",
+    "modelSearch": "Search models…",
+    "systemPrompt": "System prompt",
+    "systemPromptHint": "Loaded as the static system message. Enabled skills are appended below it.",
+    "outputSchema": "Output schema",
+    "outputSchemaOption": "Standard findings JSON",
+    "strategy": "Review strategy",
+    "strategyHint": "How the diff is sent to the model. Single pass = whole diff in one call (recommended); map-reduce = one call per file (for very large PRs); auto = single pass, switching to map-reduce on large diffs.",
+    "strategyOptions": {
+      "single-pass": "Single pass — whole diff in one call",
+      "map-reduce": "Map-reduce — one call per file",
+      "auto": "Auto — single pass, map-reduce when large"
+    },
+    "ciFailOn": "CI gate",
+    "ciFailOnHint": "In GitHub Actions only: when should this agent's review block the PR (request changes + fail the check) vs just comment? Decided by finding severity, not the model. No effect on reviews shown in the studio.",
+    "ciFailOnOptions": {
+      "never": "Never block — comment only",
+      "critical": "Block on critical (recommended)",
+      "warning": "Block on warning or critical",
+      "any": "Block on any finding"
+    },
+    "repoIntel": "Repo intelligence",
+    "repoIntelHint": "Inject repo context (repo skeleton, callers of changed symbols, and a 'high blast-radius' note) into this agent's review prompt. On by default. Turning it off sends only the diff — useful for cheap models or self-contained PRs.",
+    "save": "Save agent",
+    "saving": "Saving…",
+    "saved": "Saved (v{version})",
+    "savedToast": "Agent saved (v{version})"
+  },
+  "skills": {
+    "title": "Skills",
+    "enabledCount": "{linked} of {total} enabled",
+    "filterPlaceholder": "Filter skills…",
+    "orderHint": "Order matters — earlier skills appear earlier in the assembled prompt. Toggle to attach.",
+    "linked": "Linked to this agent",
+    "available": "Available skills",
+    "none": "No skills linked yet — toggle a skill below to inject it into this agent's prompt.",
+    "noMatch": "No skills match the filter.",
+    "moveUp": "Move up",
+    "moveDown": "Move down",
+    "disabledNote": "disabled — not injected until enabled",
+    "manage": "Manage skills",
+    "saved": "Skills updated (v{version})"
+  },
+  "mount": {
+    "body": "Mount point for {owner}. The Agent Editor shell + tab routing are wired by A2 — {owner} renders this tab."
+  },
+  "prompt": {
+    "title": "Prompt preview",
+    "subtitle": "Exactly what the model receives when this agent reviews a PR — assembled from the system prompt, linked skills, memory, project context, repo intelligence and the diff.",
+    "pr": "Preview on PR",
+    "pipeline": "Assembly pipeline",
+    "tokens": "~{count} tokens",
+    "system": "System prompt + injection guard",
+    "skills": "Skills / rules",
+    "memory": "Relevant memory",
+    "specs": "Project context",
+    "repoMap": "Repo skeleton",
+    "callers": "Callers of changed symbols",
+    "prDescription": "PR description",
+    "user": "Full user message",
+    "empty": "not included",
+    "loadError": "Could not build the prompt preview."
+  },
+  "versions": {
+    "title": "Version history",
+    "subtitle": "Every config change (model, prompt, strategy, gate, repo-intel, skills) creates an immutable version — used for reproducible evals.",
+    "current": "current",
+    "skills": "{count, plural, =0 {no skills} one {# skill} other {# skills}}",
+    "promptLines": "{count} prompt lines",
+    "loadError": "Could not load versions.",
+    "empty": "No versions yet."
+  }
+}

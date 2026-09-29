@@ -1,0 +1,47 @@
+import type { CSSProperties } from "react";
+
+/** Co-located styles for SkillsTab. */
+export const s = {
+  wrap: { maxWidth: 820 } satisfies CSSProperties,
+  header: { display: "flex", alignItems: "center", gap: 12, marginBottom: 6 } satisfies CSSProperties,
+  h2: { fontSize: 18, fontWeight: 700 } satisfies CSSProperties,
+  count: { fontSize: 13, color: "var(--text-muted)" } satisfies CSSProperties,
+  hint: { fontSize: 13, color: "var(--text-secondary)", marginBottom: 18, lineHeight: 1.5 } satisfies CSSProperties,
+  list: { display: "flex", flexDirection: "column", gap: 8, marginBottom: 24 } satisfies CSSProperties,
+  row: (linked: boolean): CSSProperties => ({
+    display: "flex",
+    alignItems: "center",
+    gap: 12,
+    padding: "12px 14px",
+    borderRadius: 8,
+    border: `1px solid ${linked ? "var(--accent)" : "var(--border)"}`,
+    background: linked ? "var(--bg-elevated)" : "var(--bg-surface)",
+  }),
+  order: {
+    width: 22,
+    height: 22,
+    borderRadius: 6,
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: 12,
+    fontWeight: 700,
+    background: "var(--accent)",
+    color: "#fff",
+    flexShrink: 0,
+  } satisfies CSSProperties,
+  body: { flex: 1, minWidth: 0 } satisfies CSSProperties,
+  nameRow: { display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" } satisfies CSSProperties,
+  name: { fontSize: 14, fontWeight: 600 } satisfies CSSProperties,
+  desc: {
+    fontSize: 13,
+    color: "var(--text-secondary)",
+    marginTop: 3,
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    whiteSpace: "nowrap",
+  } satisfies CSSProperties,
+  muted: { fontSize: 12, color: "var(--text-muted)" } satisfies CSSProperties,
+  arrows: { display: "flex", gap: 4 } satisfies CSSProperties,
+  filter: { maxWidth: 280, marginBottom: 12 } satisfies CSSProperties,
+} as const;

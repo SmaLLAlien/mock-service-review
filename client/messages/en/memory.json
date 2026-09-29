@@ -1,0 +1,68 @@
+{
+  "page": {
+    "crumb": "Memory",
+    "heading": "Memory",
+    "count": "{count, plural, one {# entry} other {# entries}} · pgvector · semantic",
+    "searchPlaceholder": "Search memory…",
+    "filterBadge": "filter",
+    "loadError": "Could not load memory.",
+    "empty": {
+      "title": "No memory matches",
+      "body": "Memory is created by the 'Learn' action on findings and by retrieval-backed agents. Adjust filters to see more."
+    },
+    "filters": {
+      "scope": "Scope",
+      "kind": "Kind",
+      "freshness": "Freshness",
+      "showStale": "Show stale (>60d)"
+    },
+    "subtitle": "What agents have learned: decisions, conventions, preferences and facts. The most relevant entries are injected into every review prompt.",
+    "add": "Add memory",
+    "stale": "stale"
+  },
+  "scope": {
+    "repo": "repo",
+    "global": "global",
+    "team": "team"
+  },
+  "kind": {
+    "decision": "decision",
+    "convention": "convention",
+    "preference": "preference",
+    "fact": "fact",
+    "learning": "learning"
+  },
+  "card": {
+    "neverUsed": "never used",
+    "usedToday": "used today",
+    "usedDayAgo": "used 1d ago",
+    "usedDaysAgo": "used {days}d ago"
+  },
+  "detail": {
+    "edit": "Edit",
+    "delete": "Delete",
+    "contentLabel": "Content",
+    "kindLabel": "Kind",
+    "scopeLabel": "Scope",
+    "save": "Save",
+    "cancel": "Cancel",
+    "stat": {
+      "confidence": "CONFIDENCE",
+      "scope": "SCOPE",
+      "updated": "UPDATED"
+    },
+    "sourceContexts": "Source contexts",
+    "noSources": "No source contexts recorded.",
+    "prLabel": "PR #{pr}",
+    "selectTitle": "Select a memory",
+    "selectBody": "Pick an entry to see its sources and edit it.",
+    "deleteConfirm": "Delete this memory entry?",
+    "repoLabel": "Repository",
+    "created": "Added"
+  },
+  "add": {
+    "title": "Add memory",
+    "contentPlaceholder": "e.g. Amounts are integer cents everywhere",
+    "save": "Add"
+  }
+}

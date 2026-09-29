@@ -1,0 +1,16 @@
+{
+  "name": "@devdigest/mock-server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "In-memory Express mock of the DevDigest API (no DB, no LLM, no GitHub). Serves rich demo data for the Next.js client.",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

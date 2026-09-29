@@ -1,0 +1,35 @@
+{
+  "title": "Project Context",
+  "chunks": "{count} chunks",
+  "reindex": "Re-index",
+  "indexing": "Indexing…",
+  "resync": "Resync",
+  "resyncing": "Resyncing…",
+  "indexStatus": "Index status: {status}",
+  "loadError": "Couldn’t load specs",
+  "kb": "{kb}kb",
+  "empty": {
+    "title": "No spec files yet",
+    "body": "Drop your PRDs, tech specs, and acceptance criteria under .devdigest/specs/. Every agent and the PR brief read them as grounding context."
+  },
+  "mode": {
+    "preview": "preview",
+    "edit": "edit"
+  },
+  "editor": {
+    "loadError": "Couldn’t load spec",
+    "save": "Save",
+    "saving": "Saving…"
+  },
+  "subtitle": "Specs, PRDs and acceptance criteria under .devdigest/specs/. Agents read them as grounding context (the \"## Project context\" section of the prompt).",
+  "newSpec": "New spec",
+  "newSpecPath": "File path",
+  "newSpecTemplate": "# New spec\n\n## Requirements\n- \n\n## Acceptance criteria\n- [ ] \n",
+  "create": "Create",
+  "repoIntel": "Repo intelligence",
+  "filesIndexed": "{indexed} files indexed · {skipped} skipped",
+  "selectTitle": "Select a spec",
+  "selectBody": "Pick a file on the left to preview or edit it.",
+  "updated": "updated {date}",
+  "saved": "Saved"
+}
